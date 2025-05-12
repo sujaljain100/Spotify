@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      body {
+        background-color: black;
+        font-family: sans-serif;
+      }
+      .fullbody {
+        display: flex;
+      }
+      .aside {
+        background-color: black;
+        width: 28%;
+
+      }
+      aside {
+        background-color: #121212;
+        width: 100%;
+        color: white;
+        border-radius: 10px;
+      }
+      aside i {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      aside span {
+        margin-left: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      .aside2 {
+        width: 100%;
+        height: 180px;
+        background-color: #121212;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 16px;
+        margin-top: 13px;
+        color: white;
+        border-radius: 10px;
+      }
+      .aside2 header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .aside2 span {
+        margin-left: -125px;
+      }
+      .aside2 i {
+        margin-right: 10px;
+      }
+      .aside_section {
+        background-color: #1F1F1F;
+        border-radius: 12px;
+        margin: 12px 20px 9px;
+        width: 86%;
+      }
+      .aside_section h3 {
+        margin-bottom: 13px;
+        padding-top: 14px;
+      }
+      .aside_section h5 {
+        margin-bottom: 13px;
+      }
+      .aside_section button {
+        padding: 10px;
+        border: none;
+        color: black;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+      .scroll {
+        height: 130px;
+        width: 100%;
+        overflow-y: scroll;
+      }
+      .aside3 {
+        background-color: #121212;
+        margin-top: 30px;
+        line-height: 36px;
+        border-radius: 10px;
+        padding-top: 20px;
+      }
+      .aside3 span {
+        font-size: 0.89rem;
+      }
+      .aside3 button {
+        background-color: transparent;
+        color: white;
+        border-radius: 12px;
+        border: none;
+        border: 1.2px solid white;
+        height: 37px;
+        width: 100px;
+        padding-top: 7px;
+        padding-right: 10px;
+        margin-left: 80px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      .aside3 button:hover{
+        transform: scale(1.1);
+      }
+      .section {
+        background-color: black;
+        width: 100%;
+        padding: 15px;
+      }
+      .section .header_section .arrows i {
+        background-color: #0A0A0A;
+        height: 40px;
+        width: 38px;
+        text-align: center;
+        padding: 11px;
+        
+        border-radius: 50%;
+      }
+      .section .header_section .arrows{
+        margin-left: 13px;
+      }
+      .section .header_section {
+        display: flex;
+        justify-content: space-between;
+        background-color: #121212;
+        align-items: center;
+        height: 60px;
+        margin-top: -16px;
+        width: 100%;
+      }
+      .section .header_section .login {
+        margin-top: 3px;
+      }
+      .section .header_section .login a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        margin-right: 20px;
+        padding: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .section .header_section .login a:hover {
+        background-color: white;
+        color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: 0.3s ease;
+      }
+
+      .hero_section .lines ,.hero_section2 .lines {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: 1C1C1C;
+        height: 60px;
+        width: 100%;
+      }
+      .singers , .albums{
+        display: flex;
+        background-color: 1C1C1C;
+        height: 250px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .artists{
+        margin-top: -140px;
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .artists h3, .artists h5{
+        position: relative;
+        top: 140px;
+      }
+      .pritam{
+        background-image: url(pritam.jpeg);
+        background-size: cover;
+      }
+     
+      .arijit{
+        background-image: url(arijit);
+        background-size: cover;
+      }
+      .rahman{
+        background-image: url(ar\ rahman);
+        background-size: cover;
+      }
+      .honey{
+        background-image: url(honey);
+        background-size: cover;
+      }
+      .vishal{
+        background-image: url(vishal);
+        background-size: cover;
+      }
+      .sachin{
+        background-image: url(sachin);
+        background-size: cover;
+      }
+      .atif{
+        background-image: url(atif);
+        background-size: cover;
+      }
+      .hero_section ,.hero_section2{
+        background-color: #1C1C1C;
+      }
+      .hero_section2{
+        display: flex;
+        flex-direction: column;
+      }
+       .album{
+        margin-top: -140px;
+        height: 130px;
+        width: 130px;
+        border-radius: 10px;
+        background-color: white;
+       }
+     .albums h3, .albums h5{
+        position: relative;
+        top: 140px;
+      }
+      
+      .aashiqui{
+        background-image: url(aashique2);
+        background-size: cover;
+      }
+     
+      .love{
+        background-image: url(love\ hotel);
+        background-size: cover;
+      }
+      .raja{
+        background-image: url(ek\ tha\ raja);
+        background-size: cover;
+      }
+      .animal{
+        background-image: url(animal);
+        background-size: cover;
+      }
+      .sajni{
+        background-image: url(sajni);
+        background-size: cover;
+      }
+      .moonstape{
+        background-image: url(moosestep);
+        background-size: cover;
+      }
+      .making{
+        background-image: url(making);
+        background-size: cover;
+      }
+      .albums .album h5{
+        position: relative;
+        top: 132px;
+      }
+      .player{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        height: 100px;
+        background-color: black;
+      }
+      .player_icons{
+        display: flex;
+        justify-content: center;
+        gap: 42px;
+        font-size: 28px;
+        padding-top: 18px;
+      }
+      .play_bar input{
+        height: 50px;
+        width: 800px;
+        
+      }
+      .aside span{
+        cursor: pointer;
+      }
+      .aside span:hover{
+        text-decoration: underline;
+        transition: .3s ease-in-out;
+      }
+      .scroll button{
+        cursor: pointer;
+      }
+      .scroll button:hover{
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullbody">
+      <div class="aside">
+        <aside>
+          <img
+            src="spotify-icon-spotify-logo-spotify-symbol-logo-set-free-vector-removebg-preview.png"
+            alt=""
+            height="120px"
+          /><br />
+          <i class="fa-solid fa-house">&nbsp;</i><span>Home</span><br />
+          <i class="fa-solid fa-search"></i><span>Search</span>
+        </aside>
+        
+
+        <aside class="aside2">
+          <header>
+            <i class="fa-solid fa-book"></i>
+            <span>Your Library</span>
+            <i class="fa-solid fa-plus"></i>
+          </header>
+          <div class="scroll">
+            <div class="aside_section">
+              <h3>Create your playlist</h3>
+              <h5>It's easy,we w'll help you</h5>
+              <button>Create Playlist</button>
+            </div>
+            <div class="aside_section">
+              <h3>Let's find some podcasts to follow</h3>
+              <h5>We'll keep you updated on new episode</h5>
+              <button>Browse Podcasts</button>
+            </div>
+            <div class="aside_section">
+              <h3>Create your playlist</h3>
+              <h5>It's easy,we w'll help you</h5>
+              <button>Create Playlist</button>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="aside3">
+          <span>Legal</span>&nbsp <span>Safety&Privacy center</span> &nbsp;<span
+            >Privacy Policy</span
+          ><br />
+          <span>Cookies</span> &nbsp; <span>About ads</span> &nbsp;
+          <span>Accessibilty</span> <br />
+          <span>Cookies</span><br />
+          <button><i class="fa-solid fa-globe"></i>&nbsp;Engish</button>
+        </aside>
+      </div>
+
+      <section class="section">
+        <div class="header_section">
+          <div class="arrows">
+            <i class="fa-solid fa-less-than"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-greater-than"></i>
+          </div>
+          <div class="login">
+            <a href="">Signup</a>
+            <a href="">LogIN</a>
+          </div>
+        </div>
+
+        <div class="hero_section">
+          <div class="lines">
+            <div class="pop">
+              <h2>Popular artists</h2>
+            </div>
+            <div class="showall">
+              <h4>Show all</h4>
+            </div>
+          </div>
+
+         <div class="singers">
+            <div class="artists pritam"><h3>Pritam</h3> <br> <h5>Artist</h5></div>
+            <div class="artists arijit"><h3>Arijit Singh</h3> <br> <h5>Artist</h5></div>
+            <div class="artists rahman"><h3>A.R Rahman</h3> <br> <h5>Artist</h5></div>
+            <div class="artists sachin"><h3>Sachin-Jigar</h3> <br> <h5>Artist</h5></div>
+            <div class="artists honey"><h3>Yo Yo Honey singh</h3> <br> <h5>Artist</h5></div>
+            <div class="artists vishal"><h3>Vishal Mishra</h3> <br> <h5>Artist</h5></div>
+            <div class="artists atif"><h3>Atif Aslam</h3> <br> <h5>Artist</h5></div>
+         </div>
+        </div>
+
+        <div class="hero_section2">
+            <div class="lines">
+              <div class="pop">
+                <h2>Popular Albums</h2>
+              </div>
+              <div class="showall">
+                <h4>Show all</h4>
+              </div>
+            </div>
+  
+           <div class="albums">
+              <div class="album aashiqui"><h3>Aashiqui 2</h3> <br> <h5>Mithun,Ankit Tiwari</h5></div>
+              <div class="album Love "><h3>Love Hotel Singh</h3> <br> <h5>leftovermax</h5></div>
+              <div class="album raja"><h3>Ek the raja</h3> <br> <h5>Badshah</h5></div>
+              <div class="album animal"><h3>Animal</h3> <br> <h5>Manan Bhardwaj</h5></div>
+              <div class="album sajni"><h3>Sajni</h3> <br> <h5>Ram Sampath,Arijit</h5></div>
+              <div class="album moonstape"><h3>moonstape</h3> <br> <h5>Sidhu Moose Wala</h5></div>
+              <div class="album making" ><h3>making</h3> <br> <h5>Karan Ahuja </h5></div>
+           </div>
+          </div>
+      </section>
+    </div>
+
+    <div class="player">
+      <div class="player_icons">
+        <i class="fa-solid fa-shuffle"></i>
+        <i class="fa-solid fa-backward-step"></i>
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-forward-step"></i>
+        <i class="fa-solid fa-clock-rotate-left"></i>
+      </div>
+      <div class="play_bar">
+        <input type="range">
+      </div>
+    </div>
+  </body>
+</html>
